@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -442,6 +443,28 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
+.form__input_file {
+  opacity: 0;
+  width: 138px;
+  height: 30px;
+  margin-top: 10px;
+}
+.form__input_new-file::after {
+  content: " ";
+  width: 138px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  top: 10px;
+  left: 100px;
+}
+.form__input_new-file::before {
+  content: url(../assets/imgs/icons/🔹\ Icon\ Color\(1\).png);
+  position: absolute;
+  top: 17px;
+  left: 215px;
+}
 .form__input:focus {
   outline: none;
   border: 1px solid #007BFF;
@@ -469,16 +492,6 @@ body {
   box-shadow: 0px 0px 0px 1px #E4E4E4 inset;
   border-radius: 50%;
   left: -20px;
-}
-.form__l-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-.form__l-flex .form__input-container {
-  flex: 1;
 }
 .form__submit {
   width: 100%;
@@ -536,4 +549,39 @@ body {
 }
 .form .select__option_placeholder {
   display: none;
+}
+
+.btn-remove {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+}
+.btn-remove::after {
+  content: url(../assets/imgs/icons/🔹\ Icon\ Color.png);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.l-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.l-flex .form__input-container {
+  flex: 1;
+}
+.l-flex_upload {
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 20px;
 }

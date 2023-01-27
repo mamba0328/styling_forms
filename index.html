@@ -12,7 +12,7 @@
     <main class="main">
       <form action="#" class="form">
         <h2 class="form__title">Create an Account</h2>
-        <div class="form__l-flex">
+        <div class="l-flex">
           <div class="form__input-container">
             <label class="form__label" for="first-name">First Name</label>
             <input
@@ -57,7 +57,7 @@
           Female</label
         >
 
-        <div class="form__l-flex">
+        <div class="l-flex">
           <div class="form__input-container">
             <label class="form__label form__label_country" for="country">
               Country
@@ -108,8 +108,19 @@
 
       <form action="#" class="form">
         <h2 class="form__title">Profile</h2>
+        
+        <div class="form__input-container  l-flex l-flex_upload">
+          <img src="./assets/imgs/user_image.png" alt="user photo" class="form__photo">
+          <div class="l-flex">
+            <label for="file" class="form__label">
+              <input type="file" class="form__input form__input_file" id="file">
+              <span class="form__input_new-file"></span>
+            </label>
+            <button type="button" class="form__remove-file btn-remove"></button>
+          </div>
+        </div>
 
-        <div class="form__l-flex">
+        <div class="l-flex">
           <div class="form__input-container">
             <label class="form__label" for="name">Name</label>
             <input
@@ -131,7 +142,7 @@
             />
           </div>
         </div>
-        <div class="form__l-flex">
+        <div class="l-flex">
           <div class="form__input-container">
             <label class="form__label form__label_country" for="country_2">
               Country
@@ -167,7 +178,7 @@
           </div>
         </div>
         </div>
-        <div class="form__l-flex">
+        <div class="l-flex">
           <div class="form__input-container">
             <label class="form__label" for="zip">Zip Code</label>
             <input
