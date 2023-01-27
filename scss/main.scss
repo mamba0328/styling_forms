@@ -24,7 +24,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 25px;
 
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:940px) {
         @include flex(column, center, center);
     }
 }
@@ -192,9 +192,11 @@ body {
 
     &__terms {
         text-align: center;
+        max-width: 500px;
+        width: 100%;
         color: $sub-color;
         line-height: 1.4;
-        padding: 0 80px 20px;
+        padding-bottom: 20px;
         margin-bottom: 20px;
         border-bottom: 1px solid $border-color;
         letter-spacing: -0.1px;
