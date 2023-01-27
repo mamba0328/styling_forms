@@ -59,7 +59,7 @@
 
         <div class="form__l-flex">
           <div class="form__input-container">
-            <label class="form__label form__label_country" for="form__country">
+            <label class="form__label form__label_country" for="country">
               Country
               <select
                 name="country"
@@ -133,11 +133,11 @@
         </div>
         <div class="form__l-flex">
           <div class="form__input-container">
-            <label class="form__label form__label_country" for="form__country">
+            <label class="form__label form__label_country" for="country_2">
               Country
               <select
                 name="country"
-                id="country"
+                id="country_2"
                 class="form__input select"
                 required
               >
@@ -157,11 +157,11 @@
             </label>
           </div>
           <div class="form__input-container">
-            <label class="form__label" for="city">City</label>
+            <label class="form__label" for="city_2">City</label>
             <input
               type="text"
               name="city"
-              id="city"
+              id="city_2"
               class="form__city form__input"
             />
           </div>
@@ -169,20 +169,22 @@
         </div>
         <div class="form__l-flex">
           <div class="form__input-container">
-            <label class="form__label" for="Zip">Zip Code</label>
+            <label class="form__label" for="zip">Zip Code</label>
             <input
-              type="text"
-              class="form__first-name form__input"
+              type="number"
+              class="form__first-name form__input form__input_zip"
               name="first-name"
+              id="zip"
               required
             />
           </div>
           <div class="form__input-container">
-            <label class="form__label" for="last-name">Phone Number</label>
+            <label class="form__label" for="phone">Phone Number</label>
             <input
-              type="text"
-              class="form__last-name form__input"
-              name="last-name"
+              type="tel"
+              class="form__last-name form__input form__input"
+              name="phone"
+              id="phone"
               required
             />
           </div>

@@ -437,6 +437,11 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.15rem;
 }
+.form__input_zip::-webkit-outer-spin-button, .form__input_zip::-webkit-inner-spin-button {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
+}
 .form__input:focus {
   outline: none;
   border: 1px solid #007BFF;
@@ -485,6 +490,10 @@ body {
   font-size: 1.15rem;
   line-height: 1.45;
   margin-bottom: 22px;
+}
+.form__submit_small {
+  width: 150px;
+  margin-bottom: 104px;
 }
 .form__terms {
   text-align: center;
