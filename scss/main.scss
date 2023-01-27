@@ -1,0 +1,209 @@
+@import '_normalize';
+@import 'vars';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+    color: $font-color;
+    font-size: $fz;
+}
+
+.main {
+    @include flex(row, center, center);
+    gap: 30px;
+    background-color: $bg-color ;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    padding: 25px;
+
+    @media screen and (max-width:800px) {
+        @include flex(column, center, center);
+    }
+}
+
+.form {
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    padding: 35px 35px 0;
+    border-radius: 6px;
+
+    &__title {
+        font-size: 1.85rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        color: $label-color;
+        font-size: 1.15rem;
+        line-height: 1.45;
+
+        &_country {
+            width: 100%;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 10.5px;
+                height: 5.25px;
+                background-color: darken($border-color, 33%);
+                clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+                transform: rotate(180deg);
+                top: 40px;
+                right: 13px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 10.5px;
+                height: 5.25px;
+                background-color: darken($border-color, 33%);
+                clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+                top: 48px;
+                right: 13px;
+            }
+        }
+    }
+
+    &__input-container {
+        @include flex(column, center, flex-start);
+        gap: 7px;
+        margin-bottom: 20px;
+
+        &_email {
+            margin-bottom: 45px;
+            position: relative;
+
+            &::after {
+                content: "We'll never share your email with anyone else.";
+                position: absolute;
+                bottom: -25px;
+                color: $sub-color;
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 8px 0 8px 10px;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.15rem;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $sub-blue;
+        }
+    }
+
+    &__gender {
+        display: inline-block;
+        margin: 0 21px 20px 0;
+    }
+
+    &__radio {
+        opacity: 0;
+
+        &:checked~ ::after {
+            box-shadow: 0px 0px 0px 6px $sub-blue inset;
+            border: none;
+        }
+    }
+
+    &__new-radio {
+        position: relative;
+        margin-right: 10px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            box-shadow: 0px 0px 0px 1px $border-color inset;
+            border-radius: 50%;
+            left: -20px;
+        }
+
+    }
+
+    &__l-flex {
+        @include flex(row, center, center);
+        gap: 12px;
+
+        .form__input-container {
+            flex: 1;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        background-color: $sub-blue;
+        border: 0;
+        padding: 8px 0;
+        border-radius: 6px;
+        color: #FFF;
+        font-size: 1.15rem;
+        line-height: 1.45;
+        margin-bottom: 22px;
+    }
+
+    &__terms {
+        text-align: center;
+        color: $sub-color;
+        line-height: 1.4;
+        padding: 0 80px 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+        letter-spacing: -0.1px;
+    }
+
+    &__link {
+        color: $sub-blue;
+        font-family: 'Inter', sans-serif;
+    }
+
+    &__have-account {
+        font-size: 1.15rem;
+        font-weight: 400;
+        line-height: 1.45;
+        text-align: center;
+        margin-bottom: 16px;
+
+        .form__link {
+            display: inline-block;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+    }
+
+    .select {
+        width: 100%;
+        margin-top: 8px;
+        appearance: none;
+        color: $font-color;
+
+        &:required:invalid {
+            color: $sub-color;
+        }
+
+        &__option {
+            color: $font-color;
+
+            &_placeholder {
+                display: none;
+            }
+        }
+    }
+}
