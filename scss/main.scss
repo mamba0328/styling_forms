@@ -173,6 +173,7 @@ body {
     }
 
     &__submit {
+        cursor: pointer;
         width: 100%;
         background-color: $sub-blue;
         border: 0;
@@ -218,6 +219,13 @@ body {
         }
     }
 
+    &__desc {
+        color: $sub-color;
+        position: absolute;
+        top: 53px;
+        left: 100px;
+    }
+
     .select {
         width: 100%;
         margin-top: 8px;
@@ -246,6 +254,7 @@ body {
     background-color: white;
     border: 1px solid $border-color;
     border-radius: 6px;
+    cursor: pointer;
 
     &::after {
         content: url(../assets/imgs/icons/🔹\ Icon\ Color.png);

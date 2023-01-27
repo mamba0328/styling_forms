@@ -494,6 +494,7 @@ body {
   left: -20px;
 }
 .form__submit {
+  cursor: pointer;
   width: 100%;
   background-color: #007BFF;
   border: 0;
@@ -533,6 +534,12 @@ body {
   margin-left: 20px;
   font-weight: 500;
 }
+.form__desc {
+  color: #969696;
+  position: absolute;
+  top: 53px;
+  left: 100px;
+}
 .form .select {
   width: 100%;
   margin-top: 8px;
@@ -559,6 +566,7 @@ body {
   background-color: white;
   border: 1px solid #E4E4E4;
   border-radius: 6px;
+  cursor: pointer;
 }
 .btn-remove::after {
   content: url(../assets/imgs/icons/🔹\ Icon\ Color.png);
